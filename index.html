@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="utilities.js" defer type="module"></script>
+    <script src="mainScript.js" defer type="module"></script>
+    <title>ToDo</title>
+</head>
+<body>
+    <header class="header">
+        <h1>TODO APP</h1>
+    </header>
+
+    <main>
+        <section class="todo-add__section">
+            <input type="text" class="todo-add__input" placeholder="add todo" data-todo-add-input>
+            <button class="todo-add__btn" data-todo-add-btn>add</button>
+            <button class="todo-removeAll-btn" data-todo-removeAll-btn>remove all</button>
+        </section>
+
+        <section class="todo-search__section">
+            <input type="text" class="todo-search__input" placeholder="search todo" data-todo-search-input>
+        </section>
+
+        <section class="todo-container" data-todo-container></section>
+    </main>
+
+    <template data-todo-template>
+        <div class="todo">
+            <input type="checkbox" class="todo-checkbox" data-todo-checkbox>
+            <div class="todo-info">
+                <p class="todo-text" data-todo-text>go jym</p>
+                <span class="todo-date" data-todo-date>12.12.1222</span>
+            </div>
+            <button class="todo-remove-btn" data-todo-remove-btn>X</button>
+        </div>
+    </template>
+</body>
+</html>
