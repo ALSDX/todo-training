@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+
+p, body {
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: forestgreen;
+    font-size: 24px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: antiquewhite;
+
+    h1 {
+        margin: 0 auto;
+        text-shadow: 2px 2px 13px black;
+    }
+}
+.todo-add__section {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
+    margin: 20px auto 10px;
+    padding: 0 10px;
+}
+.todo-add__input {
+    flex-grow: 3;
+    padding: 5px 0px 5px 5px;
+}
+.todo-add__btn {
+    flex-grow: 1;
+    cursor: pointer;
+}
+.todo-removeAll-btn {
+    cursor: pointer;
+
+    &:disabled {
+        cursor: not-allowed;
+    }
+}
+.todo-search__section {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin: 10px auto;
+    padding: 0 10px;
+}
+.todo-search__input {
+    flex-grow: 1;
+    padding: 5px 0px 5px 5px;
+}
+.todo-container {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin: 0 auto;
+    gap: 10px;
+    padding: 0 10px;
+}
+.todo {
+    width: 100%;
+    background-color: rgb(233, 230, 210);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 10px 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.todo-checkbox {
+    accent-color: lightgreen;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+}
+.todo-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.todo-text {
+    font-size: 14px;
+}
+.todo-date {
+    font-size: 12px;
+    font-style: italic;
+}
+.todo-remove-btn {
+    color:white;
+    margin-right: 5px;
+    border: none;
+    border-radius: 3px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-color: red;
+    &:disabled {
+        cursor: not-allowed;
+        background-color: lightgoldenrodyellow;
+    }
+}
+
+.todo:has(.todo-checkbox:checked) {
+    background-color: rgb(87, 217, 122);
+}
+
+.todo-checkbox:checked ~ .todo-info {
+    text-decoration: line-through;
+}
+
+.container__title {
+    margin: 10px auto 0px;
+    padding: 0 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
